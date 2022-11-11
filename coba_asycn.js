@@ -14,4 +14,4 @@ const userDua = getUserAsycn(2, (result) => {
     console.log(result);
 });
 
-console.log("Hello world !")
+console.log("Hello world !");
