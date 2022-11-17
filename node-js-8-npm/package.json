@@ -1,0 +1,29 @@
+{
+  "name": "koalajahat",
+  "version": "1.0.0",
+  "description": "belajar node js with NPM init",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "dev": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achmadrahmanm/koalajahat.git"
+  },
+  "author": "Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/achmadrahmanm/koalajahat/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/achmadrahmanm/koalajahat#readme",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
