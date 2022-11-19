@@ -41,6 +41,6 @@ const simpanContact = (nama, email,noHP) =>{
     // rl.close();
 }
 
-// export default simpanContact;
-module.exports.simpanContact = simpanContact;
+export default simpanContact;
+// module.exports.simpanContact = simpanContact;
 // module.exports = {tulisPertanyaan, simpanContact}

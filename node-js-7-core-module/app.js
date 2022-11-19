@@ -1,6 +1,6 @@
 import _yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import * as simpanContact from "./contacts.js";
+import simpanContact from "./contacts.js";
 const yargs = _yargs(hideBin(process.argv));
 
 yargs.command({
