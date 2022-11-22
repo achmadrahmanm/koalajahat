@@ -1,17 +1,43 @@
 const express = require("express");
+const expressLayouts = require("express-ejs-layouts");
 const app = express();
 const port = 3000;
 
+app.set("view engine", "ejs");
+app.use(expressLayouts);
+
 app.get("/", (req, res) => {
-  res.sendFile("./index.html", { root: __dirname });
+  const contactList = [
+    {
+      nama: "Achmad",
+      email: "rahmaan@gmail.com",
+      noHP: "083217364",
+    },
+    {
+      nama: "Rahman",
+      email: "rahmaan@gmail.com",
+      noHP: "083217364",
+    },
+    {
+      nama: "Mawardi",
+      email: "rahmaan@gmail.com",
+      noHP: "083217364",
+    },
+  ];
+  res.render("index", {
+    layout: "layouts/main-layout",
+    nama: "Rahman's",
+    title: "Beranda",
+    contactList,
+  });
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile("./about.html", { root: __dirname });
+  res.render("about", { layout: "layouts/main-layout", title: "About" });
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile("./contact.html", { root: __dirname });
+  res.render("contact", { layout: "layouts/main-layout", title: "Contact" });
 });
 
 app.get("/json", (req, res) => {

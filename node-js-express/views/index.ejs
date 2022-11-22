@@ -1,0 +1,13 @@
+<h1>Hello World !</h1>
+    <h2>Welcome to <%= nama %> website</h2>
+
+    <h4>Data Contacts :</h4>
+    <% if (contactList.length < 1) { %>
+    <p>Data Kosong</p>
+    <% } else { %> <% contactList.forEach(e => { %>
+    <ul>
+      <li>Nama : <%= e.nama %></li>
+      <li>Email : <%= e.email %></li>
+      <li>NoHP : <%= e.noHP %></li>
+    </ul>
+    <% })} %>
