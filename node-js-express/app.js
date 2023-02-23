@@ -13,20 +13,21 @@ app.get("/", (req, res) => {
   const contactList = [
     {
       nama: "Achmad",
-      email: "rahmaan@gmail.com",
+      email: "rahman@gmail.com",
       noHP: "083217364",
     },
     {
       nama: "Rahman",
-      email: "rahmaan@gmail.com",
+      email: "rahman@gmail.com",
       noHP: "083217364",
     },
     {
       nama: "Mawardi",
-      email: "rahmaan@gmail.com",
+      email: "rahman@gmail.com",
       noHP: "083217364",
     },
   ];
+  
   res.render("index", {
     layout: "layouts/main-layout",
     nama: "Rahman's",
@@ -46,7 +47,7 @@ app.get("/contact", (req, res) => {
 app.get("/json", (req, res) => {
   res.json({
     nama: "rahman",
-    email: "rahmaan@gmail.com",
+    email: "rahman@gmail.com",
     noHP: "083217364",
   });
 });
@@ -55,10 +56,12 @@ app.get("/readHTML", (req, res) => {
   res.sendFile("./index.html", { root: __dirname });
 });
 
-app.get("/product/:id", (req, res) => {
-  res.send(
-    `Product ID : ${req.params.id} <br>Category : ${req.query.category}`
-  );
+// app.get("/product/:id/category/:idCategory", (req, res) => { //http://localhost:3000/product/sepatu/category/12321  ---- use {req.params.idCategory}
+app.get("/product/:id", (req, res) => { //http://localhost:3000/product/sepatu?idCategory=12321 ---- use {req.query.idCategory}
+// res.send(
+//     `Product ID : ${req.params.id} <br>Category : ${req.query.idCategory}`
+//   );
+res.render("about", { layout: "layouts/main-layout", title: "Product" });
 });
 
 app.use("/", (req, res) => {

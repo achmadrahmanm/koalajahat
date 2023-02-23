@@ -33,8 +33,7 @@ http
       default:
         renderHTML("./index.html", res);
         break;
-    }
-    w;
+    };
     // if (url === "/about") {
     //   renderHTML("./about.html", res);
     // } else if (url === "/contact") {
