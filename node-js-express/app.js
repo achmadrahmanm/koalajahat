@@ -5,9 +5,19 @@ const app = express();
 const port = 3000;
 
 app.set("view engine", "ejs");
+
+// Third party Middleware
 app.use(expressLayouts);
 app.use(morgan("dev"));
+
+// Built in Middleware
 app.use(express.static("public"));
+
+//  Application level Middleware
+app.use((req, res, next) => {
+  console.log('Show Date = ' + Date.now());
+  next();
+});
 
 app.get("/", (req, res) => {
   const contactList = [
