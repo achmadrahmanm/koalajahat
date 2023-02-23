@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
       noHP: "083217364",
     },
     {
-      nama: "Lala",
+      nama: "Lala S",
       email: "lala@gmail.com", 
       noHP: "083217364",
     },
