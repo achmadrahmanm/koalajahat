@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     },
     {
       nama: "Rahman",
-      email: "rahman@gmail.com",
+      email: "rahman@gmail.com", 
       noHP: "083217364",
     },
     {
@@ -26,8 +26,13 @@ app.get("/", (req, res) => {
       email: "rahman@gmail.com",
       noHP: "083217364",
     },
+    {
+      nama: "Ardi",
+      email: "ardi@gmail.com", 
+      noHP: "083217364",
+    },
   ];
-  
+
   res.render("index", {
     layout: "layouts/main-layout",
     nama: "Rahman's",
